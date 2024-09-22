@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-5</title>
+    <!-- Lexend FONT FAMILY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- DaisyUI and Tailwind -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind custome config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primaryClr: "#B4F461",
+              bgClr: "#F9F7F3",
+            },
+            fontFamily: {
+              lexend: ['"Lexend"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="font-lexend bg-bgClr">
+    <header class="mx-auto lg:w-4/5 sticky top-0">
+      <div class="px-4 py-6 navbar bg-base-100 bg-bgClr">
+        <div class="navbar-start">
+          <button class="btn bg-primaryClr px-7">Blog</button>
+        </div>
+
+        <div class="navbar-center flex-col lg:flex-row">
+          <img class="px-3" src="./assets/logo.png" alt="Donate logo" />
+          <h1 class="font-semibold lg:text-xl text-center">
+            Donate <br class="md:hidden" />
+            Bangladesh
+          </h1>
+        </div>
+
+        <div class="navbar-end">
+          <img class="px-1" src="./assets/coin.png" alt="" />
+          <p class="text-gray-700 text-xl">
+            <!--! id: wallet-balance -->
+            <span class="mr-1" id="wallet-balance">5500</span>BDT
+          </p>
+        </div>
+      </div>
+    </header>
+    
+
+    
+    <script src="./JS/utils.js"></script>
+    <script src="./JS/app.js"></script>
+  </body>
+</html>
