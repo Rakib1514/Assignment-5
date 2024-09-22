@@ -61,7 +61,87 @@
         </div>
       </div>
     </header>
-    
+    <main class="px-4 mx-auto bg-white pt-14 border-2 border-black">
+      <section class="text-center">
+        <!--! id: btn-donation -->
+        <button id="btn-donation" class="btn bg-primaryClr">Donation</button>
+        <!--! id: btn-history -->
+        <button id="btn-history" class="btn btn-outline">History</button>
+      </section>
+
+      <!-- Card Section -->
+      
+      <section class="px-4 mx-auto py-6 lg:w-4/5 mt-4">
+        <!--? Card 1 -->
+        <div class="grid lg:grid-cols-2 gap-3 border border-gray-300 p-4 rounded-lg mb-8">
+          <figure class="w-full flex justify-center">
+            <img src="./assets/noakhali.png" alt="" />
+          </figure>
+          <div class="flex flex-col justify-between">
+            <div class="flex gap-1 items-center">
+              <img src="./assets/coin.png" alt="" />
+              <!-- !id: noakhali-total -->
+              <p><span class="mr-1" id="noakhali-total">1900</span>BDT</p>
+            </div>
+            <h3 class="font-bold text-xl">
+              Donate for Flood at Noakhali, Bangladesh
+            </h3>
+            <p class="text-gray-500 leading-7">
+              The recent floods in Noakhali have caused significant damage to
+              homes infrastructure. Your donation will help provide essential
+              supplies and to those affected by this disaster. Every
+              contribution, big or small, makes difference. Please join us in
+              supporting the relief efforts and making a positive impact on the
+              lives of those in need.
+            </p>
+            <!--! id: noakhali-input  -->
+            <input
+              id="noakhali-input"
+              type="number"
+              placeholder="Write Donation Amount"
+              class="input input-bordered w-full"
+            />
+            <!--! id: noakhali-donate -->
+            <button id="noakhali-donate" class="btn bg-primaryClr">
+              Donate Now
+            </button>
+          </div>
+        </div>
+        <!--? Card 2 -->
+        <div class="grid lg:grid-cols-2 gap-3 border border-gray-300 p-4 rounded-lg mb-8">
+          <figure class="w-full flex justify-center">
+            <img src="./assets/feni.png" alt="" />
+          </figure>
+          <div class="flex flex-col justify-between">
+            <div class="flex gap-1 items-center">
+              <img src="./assets/coin.png" alt="" />
+              <!--! feni-total -->
+              <p><span id="feni-total">600</span>BDT</p>
+            </div>
+            <h3 class="font-bold text-xl">
+                Donate for Flood Relief in Feni,Bangladesh
+            </h3>
+            <p class="text-gray-500 leading-7">
+                The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
+            </p>
+            <!--! id: feni-input  -->
+            <input
+              id="feni-input"
+              type="number"
+              placeholder="Write Donation Amount"
+              class="input input-bordered w-full"
+            />
+            <!--! id: feni-donate -->
+            <button id="feni-donate" class="btn bg-primaryClr">
+              Donate Now
+            </button>
+          </div>
+        </div>
+      </section>
+      
+      <!-- History Section -->
+       <section></section>
+    </main>
 
     
     <script src="./JS/utils.js"></script>
