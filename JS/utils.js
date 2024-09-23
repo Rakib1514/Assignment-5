@@ -31,11 +31,11 @@ function historyUpdater(amount, headingText) {
 // Modal call
 
 function greetModal() {
-  const modal = nodeCall("#my_modal_5");
+  const greet = nodeCall("#my_modal_5");
   const closeButton = nodeCall("#close-btn");
 
-  modal.showModal();
+  greet.showModal();
   closeButton.addEventListener("click", () => {
-    modal.close();
+    greet.close();
   });
 }

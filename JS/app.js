@@ -3,6 +3,14 @@ const noakhaliDonateBtn = nodeCall("#noakhali-donate");
 const feniDonateBtn = nodeCall('#feni-donate');
 const aidDonateBtn = nodeCall('#aid-donate');
 
+
+// blog link
+const btnBlog = nodeCall("#btn-blog");
+btnBlog.addEventListener("click", function () {
+  window.location.href = "./blog.html";
+});
+
+
 // Donation and History Toggle
 nodeCall('#btn-history').addEventListener('click', function(){
   nodeCall('#history').classList.remove('hidden');
@@ -106,3 +114,6 @@ aidDonateBtn.addEventListener("click", function () {
 
   historyUpdater(inputValue, nodeCall("#aid-heading").innerText);
 });
+
+
+
