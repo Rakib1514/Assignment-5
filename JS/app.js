@@ -41,10 +41,9 @@ noakhaliDonateBtn.addEventListener("click", function () {
 
   //   all the calculation
   updateTotalCollection(noakhaliInput, noakhaliCollection);
-  alert("Congratulation");
 
   // TODO:  modal call
-  //   my_modal_5.showModal();
+  greetModal();
 
   historyUpdater(inputValue, nodeCall("#noakhali-heading").innerText);
 });
@@ -71,10 +70,9 @@ feniDonateBtn.addEventListener("click", function () {
 
   //   all the calculation
   updateTotalCollection(feniInput, feniCollection);
-  alert("Congratulation");
 
   // TODO:  modal call
-  //   my_modal_5.showModal();
+  greetModal();
 
   historyUpdater(inputValue, nodeCall("#feni-heading").innerText);
 });
@@ -104,8 +102,7 @@ aidDonateBtn.addEventListener("click", function () {
   updateTotalCollection(aidInput, aidCollection);
 
   // TODO:  modal call
-  //   my_modal_5.showModal();
+  greetModal();
 
   historyUpdater(inputValue, nodeCall("#aid-heading").innerText);
-  alert("Congratulation");
 });

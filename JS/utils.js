@@ -2,8 +2,6 @@ function nodeCall(quarySelector) {
   return document.querySelector(quarySelector);
 }
 
-
-
 // function for calculate and update zonal collection;
 function updateTotalCollection(input, total) {
   total.innerText = parseFloat(input.value) + parseFloat(total.innerText);
@@ -28,4 +26,16 @@ function historyUpdater(amount, headingText) {
     </div>
   `;
   historySec.appendChild(newTransec);
+}
+
+// Modal call
+
+function greetModal() {
+  const modal = nodeCall("#my_modal_5");
+  const closeButton = nodeCall("#close-btn");
+
+  modal.showModal();
+  closeButton.addEventListener("click", () => {
+    modal.close();
+  });
 }
