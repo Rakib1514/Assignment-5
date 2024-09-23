@@ -1,6 +1,7 @@
 const walletBalance = nodeCall("#wallet-balance");
 const noakhaliDonateBtn = nodeCall("#noakhali-donate");
 const feniDonateBtn = nodeCall('#feni-donate');
+const aidDonateBtn = nodeCall('#aid-donate');
 
 // Donation and History Toggle
 nodeCall('#btn-history').addEventListener('click', function(){
@@ -18,7 +19,7 @@ nodeCall('#btn-donation').addEventListener('click', function(){
 
 })
 
-// Donation calculation
+// Noakhali Donation calculation
 noakhaliDonateBtn.addEventListener("click", function () {
   const noakhaliCollection = nodeCall("#noakhali-total");
   const noakhaliInput = nodeCall("#noakhali-input");
@@ -48,6 +49,7 @@ noakhaliDonateBtn.addEventListener("click", function () {
   historyUpdater(inputValue, nodeCall("#noakhali-heading").innerText);
 });
 
+// feni Donation
 feniDonateBtn.addEventListener("click", function () {
   const feniCollection = nodeCall("#feni-total");
   const feniInput = nodeCall("#feni-input");
@@ -75,4 +77,35 @@ feniDonateBtn.addEventListener("click", function () {
   //   my_modal_5.showModal();
 
   historyUpdater(inputValue, nodeCall("#feni-heading").innerText);
+});
+
+
+//AID for Injured 
+aidDonateBtn.addEventListener("click", function () {
+  const aidCollection = nodeCall("#aid-total");
+  const aidInput = nodeCall("#aid-input");
+  const inputValue = Number(aidInput.value);
+  const walletBalanceNum = parseFloat(walletBalance.innerText);
+
+  //   validation
+  if (
+    isNaN(inputValue) ||
+    inputValue < 1 ||
+    walletBalanceNum < 1 ||
+    inputValue > walletBalanceNum
+  ) {
+    alert(
+      `Transection Failed. You given "${aidInput.value}" Please give currect Amount`
+    );
+    return;
+  }
+
+  //   all the calculation
+  updateTotalCollection(aidInput, aidCollection);
+
+  // TODO:  modal call
+  //   my_modal_5.showModal();
+
+  historyUpdater(inputValue, nodeCall("#aid-heading").innerText);
+  alert("Congratulation");
 });
